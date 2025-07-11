@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Bags</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #fff0f5; }
+    h1, h2 { text-align: center; color: #cc5c78; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .bag { width: 200px; text-align: center; }
+    .bag img { width: 100%; height: auto; border-radius: 10px; }
+    form { max-width: 500px; margin: 40px auto; }
+    label { display: block; margin-top: 15px; }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; }
+    button { margin-top: 20px; padding: 10px 15px; background: #cc5c78; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Our Crochet Bags</h1>
+  <div class="gallery">
+    <div class="bag">
+      <img src="https://via.placeholder.com/200x200?text=Pink+Tote" alt="Pink Tote">
+      <p>Pink Tote</p>
+    </div>
+    <div class="bag">
+      <img src="https://via.placeholder.com/200x200?text=Mini+Lilac" alt="Mini Lilac">
+      <p>Mini Lilac</p>
+    </div>
+    <div class="bag">
+      <img src="https://via.placeholder.com/200x200?text=Beige+Crossbody" alt="Beige Crossbody">
+      <p>Beige Crossbody</p>
+    </div>
+  </div>
+
+  <h2>Customize Your Bag</h2>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Choose Bag Type</label>
+    <select name="bag_type" required>
+      <option>Tote</option>
+      <option>Mini</option>
+      <option>Crossbody</option>
+    </select>
+
+    <label>Main Color</label>
+    <input type="text" name="color" placeholder="e.g. Lilac, Beige, Sky Blue" required>
+
+    <label>Add Charms (optional)</label>
+    <input type="text" name="charms" placeholder="Describe the charms you'd like">
+
+    <label>Extra Notes</label>
+    <textarea name="notes" placeholder="Write details or preferences..."></textarea>
+
+    <button type="submit">Submit Custom Order</button>
+  </form>
+</body>
+</html>
