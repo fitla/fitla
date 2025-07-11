@@ -2,34 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Fitla</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; padding: 20px; background: #fdf6f0; color: #444; }
-    header, footer { text-align: center; }
-    nav a { margin: 0 15px; text-decoration: none; color: #cc5c78; }
-    h1 { color: #cc5c78; }
+    body { margin:0; font-family:'PT Serif', serif; color:#333; background-color:#fafafa; }
+    header { text-align:center; padding:20px; font-size:2.5rem; }
+    .banner { position:relative; }
+    .banner img { width:100%; height:auto; display:block; }
+    .banner .btn { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); background:#cc5c78; padding:12px 24px; color:#fff; text-decoration:none; font-size:1.1rem; border-radius:5px; }
+    nav { text-align:center; margin-top:10px; }
+    nav a { margin:0 15px; color:#555; text-decoration:none; font-weight:bold; }
+    .instagram { position:fixed; bottom:15px; right:15px; }
+    .instagram a { font-size:2rem; color:#cc5c78; text-decoration:none; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🧶 Fitla</h1>
-    <p>Wearable art, from our hearts to your hand</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <h2>Welcome!</h2>
-    <p>Create your own unique crochet bag. Choose colors, styles, and add your charms!</p>
-    <a href="products.html">🛍 Start Customizing</a>
-  </main>
-  <footer>
-    <p>&copy; 2025 Fitla</p>
-  </footer>
+  <header>Fitla</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="banner">
+    <img src="https://via.placeholder.com/1200x500?text=Handmade+Crochet+Art" alt="Fitla crochet bags banner">
+    <a class="btn" href="products.html">Shop Now</a>
+  </div>
+  <div class="instagram">
+    <a href="https://instagram.com/fitlabags" target="_blank">📸</a>
+  </div>
 </body>
 </html>
