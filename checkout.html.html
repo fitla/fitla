@@ -31,7 +31,7 @@
       margin-top: 20px;
       font-weight: bold;
     }
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -92,23 +92,31 @@
   <form action="https://formspree.io/f/myzpgarr" method="POST">
     <label for="name">Full Name</label>
     <input type="text" name="name" required>
+
     <label for="email">Email</label>
     <input type="email" name="email" required>
 
     <label for="country">Country / Region</label>
     <input type="text" name="country" required>
+
     <label for="address">Address</label>
     <input type="text" name="address" required>
+
     <label for="apartment">Apartment, suite, etc.</label>
     <input type="text" name="apartment">
+
     <label for="city">City</label>
     <input type="text" name="city" id="city" oninput="updateTotal()" required>
+
     <label for="governorate">Governorate</label>
     <input type="text" name="governorate" required>
+
     <label for="postal">Postal Code (optional)</label>
     <input type="text" name="postal">
+
     <label for="phone">Phone Number</label>
     <input type="text" name="phone" required>
+
     <label for="payment">Payment Method</label>
     <select name="payment" required>
       <option value="instapay">Instapay</option>
@@ -130,8 +138,20 @@
       </select>
     </div>
 
+    <!-- Hidden inputs for bag, color, notes -->
+    <input type="hidden" name="Bag Type" id="hidden-bag">
+    <input type="hidden" name="Color" id="hidden-color">
+    <input type="hidden" name="Extra Notes" id="hidden-notes">
+
     <div id="total">Total Payment: —</div>
     <button type="submit">Place Order</button>
   </form>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById("hidden-bag").value = urlParams.get("bag_type") || "";
+    document.getElementById("hidden-color").value = urlParams.get("color") || "";
+    document.getElementById("hidden-notes").value = urlParams.get("notes") || "";
+  </script>
 </body>
 </html>
