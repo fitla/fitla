@@ -1,16 +1,21 @@
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Bags</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; padding: 20px; background: #fff0f5; }
+    body { font-family: 'PT Serif', serif; padding: 20px; background: #fff0f5; color: #333; }
     h1, h2 { text-align: center; color: #cc5c78; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .bag { width: 200px; text-align: center; }
-    .bag img { width: 100%; height: auto; border-radius: 10px; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; }
+    .bag { width: 240px; text-align: center; background: #fff; padding: 15px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+    .bag img { width: 100%; border-radius: 10px; }
+    .price { margin-top: 10px; font-size: 1.1rem; }
+    .old-price { text-decoration: line-through; color: #888; }
+    .new-price { color: #cc5c78; font-weight: bold; font-size: 1.3rem; }
+    .shipping { margin-top: 50px; text-align: center; font-size: 1.1rem; }
     form { max-width: 500px; margin: 40px auto; }
     label { display: block; margin-top: 15px; }
     input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; }
@@ -19,19 +24,30 @@
 </head>
 <body>
   <h1>Our Crochet Bags</h1>
+
   <div class="gallery">
     <div class="bag">
       <img src="https://i.ibb.co/mCF7rS67/13a444a1-b006-4ee5-8b3d-232da3ae9e2e.jpg" alt="Purple Beach Tote">
-      <p>the purple beach tote</p>
+      <p><strong>Purple Beach Tote</strong></p>
+      <p class="price"><span class="old-price">430 EGP</span><br><span class="new-price">350 EGP</span></p>
     </div>
     <div class="bag">
-      <img src="https://i.ibb.co/KzFt32xg/04901d53-0c14-4c9e-af66-f7015a95f3b9.jpg" alt="Mini Lavender Charm Bag">
-      <p> the sandy knots bag</p>
+      <img src="https://i.ibb.co/KzFt32xg/04901d53-0c14-4c9e-af66-f7015a95f3b9.jpg" alt="Retro Bloom">
+      <p><strong>Retro Bloom</strong></p>
+      <p class="price"><span class="old-price">470 EGP</span><br><span class="new-price">400 EGP</span></p>
     </div>
     <div class="bag">
-      <img src="https://i.ibb.co/Gfcybkyx/e61ac00c-9005-479b-a60b-0339f6365a10.jpg" alt="Neutral Everyday Shoulder Bag">
-      <p>  the retro bloom shoulder bag</p>
+      <img src="https://i.ibb.co/Gfcybkyx/e61ac00c-9005-479b-a60b-0339f6365a10.jpg" alt="Sandy Knots">
+      <p><strong>Sandy Knots</strong></p>
+      <p class="price"><span class="old-price">430 EGP</span><br><span class="new-price">350 EGP</span></p>
     </div>
+  </div>
+
+  <div class="shipping">
+    <h2>Shipping</h2>
+    <p>Alexandria, Egypt: 50 EGP</p>
+    <p>Cairo, Egypt: 80 EGP</p>
+    <p style="color: #cc5c78; font-weight: bold;">Limited time discounts active now 💖</p>
   </div>
 
   <h2>Customize Your Bag</h2>
@@ -42,18 +58,18 @@
     <label>Email</label>
     <input type="email" name="email" required>
 
-    <label>Choose Bag Type</label>
+    <label>Choose Bag</label>
     <select name="bag_type" required>
       <option>Purple Beach Tote</option>
-      <option>Mini Lavender Charm Bag</option>
-      <option>Neutral Everyday Shoulder Bag</option>
+      <option>Retro Bloom</option>
+      <option>Sandy Knots</option>
     </select>
 
     <label>Main Color</label>
     <input type="text" name="color" placeholder="e.g. Lilac, Beige, Sky Blue" required>
 
     <label>Add Charms (optional)</label>
-    <input type="text" name="charms" placeholder="Describe the charms you'd like">
+    <input type="text" name="charms">
 
     <label>Extra Notes</label>
     <textarea name="notes" placeholder="Write details or preferences..."></textarea>
